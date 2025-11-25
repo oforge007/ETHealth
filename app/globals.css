@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0fdf4 0%, #fef3c7 100%);
+  color: #1f2937;
+}
+
+/* MiniPay Optimization */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Large Tap Targets for MiniPay */
+button,
+a,
+input[type='button'],
+input[type='submit'],
+input[type='checkbox'],
+input[type='radio'] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent zoom on input focus in Safari */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Loading animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Chat bubble styles */
+.chat-bubble {
+  border-radius: 18px;
+  padding: 12px 16px;
+  word-wrap: break-word;
+  max-width: 85%;
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+}
+
+.chat-bubble-bot {
+  background: #f3f4f6;
+  color: #1f2937;
+  border-bottom-left-radius: 4px;
+  margin-right: auto;
+}
+
+/* Payment card animations */
+.payment-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.payment-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Input focus state */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+/* Success animation */
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-checkmark {
+  animation: checkmark 0.5s ease-in-out;
+}

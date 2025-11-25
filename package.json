@@ -1,0 +1,48 @@
+{
+  "name": "ethealthapp",
+  "version": "1.0.0",
+  "description": "Healthcare for the unbanked – powered by MiniPay & Celo",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^14.2.0",
+    "typescript": "^5.3.3",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/node": "^20.10.0",
+    "wagmi": "^2.5.0",
+    "viem": "^2.8.0",
+    "@celo/contractkit": "^7.0.0",
+    "@celo/celo-monorepo": "^2.0.0",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.2.0",
+    "@radix-ui/react-slot": "^2.0.2",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "lucide-react": "^0.378.0",
+    "zustand": "^4.4.2",
+    "jotai": "^2.6.0",
+    "axios": "^1.6.2",
+    "next-intl": "^3.0.0-rc.13",
+    "groq-sdk": "^0.3.0",
+    "zustand-persist": "^1.0.0",
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.1"
+  }
+}
