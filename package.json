@@ -1,4 +1,17 @@
 {
+  "name": "ethealth",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace @ethealth/react-app dev",
+    "build": "yarn workspace @ethealth/react-app build",
+    "lint": "yarn workspace @ethealth/react-app lint"
+  }
+}
+{
   "name": "ethealthapp",
   "version": "1.0.0",
   "description": "Healthcare for the unbanked – powered by MiniPay & Celo",
