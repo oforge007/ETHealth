@@ -1,46 +1,23 @@
-import type { Metadata, Viewport } from 'next'
-import './globals.css'
-import { Providers } from './providers'
+import "./globals.css";
+import { WalletConnectButton } from "@/components/WalletConnectButton";
 
-export const metadata: Metadata = {
-  title: 'ETHealth - Healthcare for the Unbanked',
-  description: 'Healthcare for the unbanked – powered by MiniPay & Celo. Connect to telemedicine providers instantly.',
-  icons: {
-    icon: '/favicon.ico',
-  },
-  openGraph: {
-    title: 'ETHealth',
-    description: 'Healthcare for the unbanked – powered by MiniPay & Celo',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
-  },
-}
+export const metadata = {
+  title: "ETHealth – Telemedicine on Celo",
+  description: "Pay doctors with cUSD via MiniPay",
+};
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-  viewportFit: 'cover',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#22c55e" />
-      </head>
-      <body className="bg-white text-gray-900 antialiased">
-        <Providers>
-          {children}
-        </Providers>
+      <body className="antialiased">
+        <header className="border-b">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-green-700">ETHealth</h1>
+            <WalletConnectButton />
+          </div>
+        </header>
+        {children}
       </body>
     </html>
-  )
+  );
 }
